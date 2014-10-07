@@ -16,8 +16,8 @@
   opponents = ["Noble", "Rauner", "Bulls", "Pritzker", "Whitney Young","Simean","Cass Tech","Renaissance"]
 
   10.times do
-    Game.create(date: date.sample, location: Faker::Address.street_address(include_secondary = false), win: "TBD", opponent: opponents.sample, season_id: 1)
-    Game.create(date: date.sample, location: Faker::Address.street_address(include_secondary = false), win: "TBD", opponent: opponents.sample, season_id: 2)
+    Game.create(date: date.sample, location: Faker::Address.street_address(include_secondary = false), opponent: opponents.sample, season_id: 1)
+    Game.create(date: date.sample, location: Faker::Address.street_address(include_secondary = false), opponent: opponents.sample, season_id: 2)
   end
 
 
