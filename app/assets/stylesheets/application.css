@@ -1348,16 +1348,13 @@ ul.row {
 }
 ul.row > li {
   float: left;
-
   height: 11em;
   width: 11em;
   line-height: 11em;
   background-color: #FA8320;
   text-align: center;
-
   margin: 0 2em 2em 0;
   cursor: pointer;
-
   -webkit-transition: all linear 0.12s;
   transition: all linear 0.12s;
 }
