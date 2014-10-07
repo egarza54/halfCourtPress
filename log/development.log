@@ -7761,3 +7761,289 @@ Processing by GameController#show as JSON
   [1m[35mStat Load (0.3ms)[0m  SELECT "stats".* FROM "stats"  WHERE "stats"."game_id" = 14 AND "stats"."stat_type" = 5
   [1m[36mStat Load (0.5ms)[0m  [1mSELECT "stats".* FROM "stats"  WHERE "stats"."game_id" = 14 AND "stats"."stat_type" = 6[0m
 Completed 200 OK in 8ms (Views: 3.1ms | ActiveRecord: 2.3ms)
+  [1m[36m (17.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.3ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140904135258)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.6ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying(255), "email" character varying(255), "password_digest" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140904135258"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Migrating to CreateTeams (20140904135318)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE "teams" ("id" serial primary key, "name" character varying(255), "school" character varying(255), "user_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140904135318"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateGames (20140904135337)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.1ms)[0m  [1mCREATE TABLE "games" ("id" serial primary key, "date" timestamp, "location" character varying(255) DEFAULT 'home', "opponent" character varying(255), "win" character varying(255), "team_score" integer, "season_id" integer, "gameover" boolean DEFAULT 'f', "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140904135337"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateStats (20140904135450)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "stats" ("id" serial primary key, "game_id" integer, "x_coord" integer, "y_coord" integer, "made" boolean, "stat_type" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140904135450"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateSeasons (20140904142537)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "seasons" ("id" serial primary key, "name" character varying(255), "team_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140904142537"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (1.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'egarza@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.400336"], ["email", "egarza@gmail.com"], ["name", "Edgar Garza"], ["password_digest", "$2a$10$AjmRY4WKOTmP4ODJzab9OOmDgP.wboIFTYv8t3ZMUDZ3l6P.x7Rxm"], ["updated_at", "2014-10-07 23:01:56.400336"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "teams" ("created_at", "name", "school", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.418315"], ["name", "Varsity"], ["school", "Mirta Ramirez"], ["updated_at", "2014-10-07 23:01:56.418315"], ["user_id", 1]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "teams" ("created_at", "name", "school", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.421351"], ["name", "Junior Varsity"], ["school", "Mirta Ramirez"], ["updated_at", "2014-10-07 23:01:56.421351"], ["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "seasons" ("created_at", "name", "team_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.431872"], ["name", "2013"], ["team_id", 1], ["updated_at", "2014-10-07 23:01:56.431872"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "seasons" ("created_at", "name", "team_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.435308"], ["name", "2014"], ["team_id", 2], ["updated_at", "2014-10-07 23:01:56.435308"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (15.7ms)[0m  [1mINSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at", "win") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.800994"], ["date", "2014-05-02 00:00:00.000000"], ["location", "375 Leland Motorway"], ["opponent", "Pritzker"], ["season_id", 1], ["updated_at", "2014-10-07 23:01:56.800994"], ["win", "W"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at", "win") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.820475"], ["date", "2014-04-03 00:00:00.000000"], ["location", "46301 Oberbrunner Freeway"], ["opponent", "Rauner"], ["season_id", 2], ["updated_at", "2014-10-07 23:01:56.820475"], ["win", "W"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at", "win") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.823210"], ["date", "2014-05-02 00:00:00.000000"], ["location", "52500 Osinski Stream"], ["opponent", "Cass Tech"], ["season_id", 1], ["updated_at", "2014-10-07 23:01:56.823210"], ["win", "L"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at", "win") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.825655"], ["date", "2014-04-07 00:00:00.000000"], ["location", "51583 Zemlak Cliff"], ["opponent", "Simean"], ["season_id", 2], ["updated_at", "2014-10-07 23:01:56.825655"], ["win", "W"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at", "win") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.827892"], ["date", "2014-04-07 00:00:00.000000"], ["location", "2593 Jalyn Camp"], ["opponent", "Cass Tech"], ["season_id", 1], ["updated_at", "2014-10-07 23:01:56.827892"], ["win", "L"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at", "win") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.830034"], ["date", "2014-05-02 00:00:00.000000"], ["location", "679 Schulist Garden"], ["opponent", "Whitney Young"], ["season_id", 2], ["updated_at", "2014-10-07 23:01:56.830034"], ["win", "L"]]
+  [1m[36m (3.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at", "win") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.835504"], ["date", "2014-04-07 00:00:00.000000"], ["location", "5811 Connelly Mountain"], ["opponent", "Cass Tech"], ["season_id", 1], ["updated_at", "2014-10-07 23:01:56.835504"], ["win", "L"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at", "win") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.838001"], ["date", "2014-04-06 00:00:00.000000"], ["location", "3208 Ullrich Circles"], ["opponent", "Pritzker"], ["season_id", 2], ["updated_at", "2014-10-07 23:01:56.838001"], ["win", "W"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at", "win") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.840203"], ["date", "2014-04-05 00:00:00.000000"], ["location", "357 Purdy Courts"], ["opponent", "Simean"], ["season_id", 1], ["updated_at", "2014-10-07 23:01:56.840203"], ["win", "L"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at", "win") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.842320"], ["date", "2014-05-02 00:00:00.000000"], ["location", "67760 Alva Stream"], ["opponent", "Renaissance"], ["season_id", 2], ["updated_at", "2014-10-07 23:01:56.842320"], ["win", "L"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at", "win") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.844536"], ["date", "2014-04-05 00:00:00.000000"], ["location", "17630 Willms Well"], ["opponent", "Cass Tech"], ["season_id", 1], ["updated_at", "2014-10-07 23:01:56.844536"], ["win", "L"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at", "win") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.846620"], ["date", "2014-04-06 00:00:00.000000"], ["location", "2168 Herzog Mews"], ["opponent", "Rauner"], ["season_id", 2], ["updated_at", "2014-10-07 23:01:56.846620"], ["win", "W"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at", "win") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.848655"], ["date", "2014-05-02 00:00:00.000000"], ["location", "3432 Labadie Rapids"], ["opponent", "Renaissance"], ["season_id", 1], ["updated_at", "2014-10-07 23:01:56.848655"], ["win", "L"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at", "win") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.850676"], ["date", "2014-04-06 00:00:00.000000"], ["location", "97040 Crawford Shores"], ["opponent", "Cass Tech"], ["season_id", 2], ["updated_at", "2014-10-07 23:01:56.850676"], ["win", "L"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at", "win") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.852751"], ["date", "2014-04-04 00:00:00.000000"], ["location", "16182 Wolff Brooks"], ["opponent", "Noble"], ["season_id", 1], ["updated_at", "2014-10-07 23:01:56.852751"], ["win", "L"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at", "win") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.854790"], ["date", "2014-05-02 00:00:00.000000"], ["location", "6570 Homenick Fields"], ["opponent", "Simean"], ["season_id", 2], ["updated_at", "2014-10-07 23:01:56.854790"], ["win", "W"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at", "win") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.856820"], ["date", "2014-04-07 00:00:00.000000"], ["location", "60830 Leo Drive"], ["opponent", "Whitney Young"], ["season_id", 1], ["updated_at", "2014-10-07 23:01:56.856820"], ["win", "L"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at", "win") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.858917"], ["date", "2014-05-02 00:00:00.000000"], ["location", "6138 Keeling Loop"], ["opponent", "Rauner"], ["season_id", 2], ["updated_at", "2014-10-07 23:01:56.858917"], ["win", "W"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at", "win") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.861730"], ["date", "2014-04-06 00:00:00.000000"], ["location", "9152 Schmitt Squares"], ["opponent", "Whitney Young"], ["season_id", 1], ["updated_at", "2014-10-07 23:01:56.861730"], ["win", "L"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at", "win") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.863967"], ["date", "2014-04-07 00:00:00.000000"], ["location", "3046 Pfannerstill Meadows"], ["opponent", "Renaissance"], ["season_id", 2], ["updated_at", "2014-10-07 23:01:56.863967"], ["win", "W"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.874968"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.874968"], ["x_coord", 408], ["y_coord", 330]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.878065"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.878065"], ["x_coord", 1391], ["y_coord", 490]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.879840"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.879840"], ["x_coord", 398], ["y_coord", 539]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.881457"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.881457"], ["x_coord", 1386], ["y_coord", 476]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.883038"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.883038"], ["x_coord", 624], ["y_coord", 223]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.884671"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.884671"], ["x_coord", 861], ["y_coord", 383]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.886196"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.886196"], ["x_coord", 735], ["y_coord", 727]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.887783"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.887783"], ["x_coord", 1290], ["y_coord", 72]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.889471"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.889471"], ["x_coord", 428], ["y_coord", 306]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.891091"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.891091"], ["x_coord", 934], ["y_coord", 399]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.892763"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.892763"], ["x_coord", 718], ["y_coord", 226]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.894291"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.894291"], ["x_coord", 563], ["y_coord", 622]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.895762"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.895762"], ["x_coord", 1078], ["y_coord", 311]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.897410"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.897410"], ["x_coord", 1098], ["y_coord", 365]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.899127"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.899127"], ["x_coord", 520], ["y_coord", 31]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.900723"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.900723"], ["x_coord", 378], ["y_coord", 237]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.902275"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.902275"], ["x_coord", 1032], ["y_coord", 648]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.903922"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.903922"], ["x_coord", 1162], ["y_coord", 295]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.905410"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.905410"], ["x_coord", 596], ["y_coord", 169]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.906945"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.906945"], ["x_coord", 1054], ["y_coord", 205]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.908380"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.908380"], ["x_coord", 988], ["y_coord", 566]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.909851"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.909851"], ["x_coord", 840], ["y_coord", 668]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.911316"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.911316"], ["x_coord", 379], ["y_coord", 167]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.912816"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.912816"], ["x_coord", 1359], ["y_coord", 157]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.914277"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.914277"], ["x_coord", 412], ["y_coord", 285]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.915837"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.915837"], ["x_coord", 506], ["y_coord", 652]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.917400"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.917400"], ["x_coord", 1023], ["y_coord", 747]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.918887"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.918887"], ["x_coord", 765], ["y_coord", 562]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.920352"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.920352"], ["x_coord", 1159], ["y_coord", 329]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.921965"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.921965"], ["x_coord", 781], ["y_coord", 439]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.923597"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.923597"], ["x_coord", 822], ["y_coord", 94]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.925121"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.925121"], ["x_coord", 493], ["y_coord", 102]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.926587"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.926587"], ["x_coord", 331], ["y_coord", 687]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.928059"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.928059"], ["x_coord", 457], ["y_coord", 598]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.929550"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.929550"], ["x_coord", 974], ["y_coord", 105]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.930991"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.930991"], ["x_coord", 823], ["y_coord", 323]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.932427"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.932427"], ["x_coord", 581], ["y_coord", 499]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.933866"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.933866"], ["x_coord", 1244], ["y_coord", 419]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.935306"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.935306"], ["x_coord", 1208], ["y_coord", 376]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.936735"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.936735"], ["x_coord", 1343], ["y_coord", 135]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.938173"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.938173"], ["x_coord", 1321], ["y_coord", 280]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.939635"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.939635"], ["x_coord", 371], ["y_coord", 323]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.941130"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.941130"], ["x_coord", 806], ["y_coord", 395]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.942585"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.942585"], ["x_coord", 625], ["y_coord", 214]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.944540"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.944540"], ["x_coord", 694], ["y_coord", 456]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.946173"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.946173"], ["x_coord", 441], ["y_coord", 597]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.947746"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.947746"], ["x_coord", 438], ["y_coord", 300]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.949261"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.949261"], ["x_coord", 1351], ["y_coord", 596]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.950729"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.950729"], ["x_coord", 1132], ["y_coord", 642]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.952225"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.952225"], ["x_coord", 1098], ["y_coord", 202]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.953847"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.953847"], ["x_coord", 366], ["y_coord", 439]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.955414"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.955414"], ["x_coord", 404], ["y_coord", 408]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.956903"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.956903"], ["x_coord", 950], ["y_coord", 376]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.958379"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.958379"], ["x_coord", 719], ["y_coord", 265]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.959974"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.959974"], ["x_coord", 744], ["y_coord", 302]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.961798"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.961798"], ["x_coord", 734], ["y_coord", 257]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.963458"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.963458"], ["x_coord", 1130], ["y_coord", 71]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.965025"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.965025"], ["x_coord", 1302], ["y_coord", 565]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-07 23:01:56.966532"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.966532"], ["x_coord", 414], ["y_coord", 106]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.968004"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.968004"], ["x_coord", 932], ["y_coord", 733]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
