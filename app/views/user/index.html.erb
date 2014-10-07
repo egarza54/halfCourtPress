@@ -1,0 +1,98 @@
+<div class="show_container">
+  <%if @current_user == nil%>
+        <div id="login">
+          <ul >
+              <%= form_for(:user, :url => {:controller => 'session', :action => 'login'}) do |f|%>
+                <li><%= f.email_field :email, :size => 70, placeholder: 'Email' %></li>
+                <li><%= f.password_field :password, :size => 70, placeholder: 'Password' %></li>
+                <% flash.each do |name, msg| %>
+                  <%= content_tag :div, msg, class: name %>
+                <% end %>
+                <br>
+                <button class="btn btn-primary btn-block" id="login_button">Log in</button>
+              <% end %>
+          </ul>
+        </div>
+
+      <button class="btn btn-primary btn-block", id="button_id">Sign up</button>
+
+      <div class="signup">
+      <ul >
+        <%= form_for(:user, :url => {:controller => 'user', :action => 'create'}) do |f|%>
+          <li><%= f.text_field :name, :size => 70, placeholder: 'Full Name' %></li>
+          <li><%= f.email_field :email, :size => 70, placeholder: 'Email' %></li>
+          <li><%= f.password_field :password, :size => 70, placeholder: 'Password' %></li>
+          <li><%= f.password_field :password_confirmation, :size => 70, placeholder: 'Confim Password' %></li>
+          <button class="btn btn-primary btn-block" id="signup_enter">Sign up</button>
+        <% end %>
+      </div>
+      </ul>
+  <% end %>
+  <div class="welcome_container">
+      <div class ="title">
+        <h1>
+          half<span style="color:#FA8320">C</span>ourt <span style="color:#FA8320">P</span>ress
+        </h1>
+      </div>
+
+      <br><br>
+
+      <div class = "about_div">
+        <h2>
+          halfCourt Press is a platform designed for basketball programs to track, collect and analyze game statistics over the course of a season.</h2>
+      </div>
+      <br><br>
+
+      <hr>
+      <br>
+      <div class ="pic_wrap">
+        <div class = "make_miss_div">
+          <%= image_tag("pick_a_team.gif")%>
+          <p>Go through our easy to use interface to create your teams, seasons, and games.</p>
+        </div>
+        <div class = "made_heat_div">
+          <%= image_tag("collect_stats.gif")%>
+          <p>Track multiple statistics such as <span style="color:blue">made shots</span>, <span style="color:green">rebounds</span>, and <span style="color:purple">steals</span> using COURT MODE</p>
+        </div>
+        <div class = "miss_heat_div">
+          <%= image_tag("show_heat.gif")%>
+          <p>Identify your team's strength and weaknesses using our <span style="color:red">m</span>u<span style="color:green">l</span><span style="color:blue">t</span><span style="color:black">i</span>-colored heatmap</span></p>
+        </div>
+      </div>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <hr>
+
+    <!-- <div class = "below_pics"> </div> -->
+      <!-- <div class="gif"></div> -->
+      <br>
+      <div class = "developement_team">
+        <h3>Team halfCourt Press</h3>
+        <br>
+        <div class="pics">
+          <img src="Dave.jpg">
+          <p>David Nanry</p>
+        </div>
+        <div class="pics">
+          <img src="Sebastian C.jpg">
+          <p>Sebastian Caso</p>
+        </div>
+        <div class="pics">
+          <img src="Edgar.jpg">
+          <p>Edgar Garza</p>
+        </div>
+        <div class="pics">
+          <img src="Michael.jpg">
+          <p>Michael Ginalick</p>
+        </div>
+      </div>
+    <!-- </div> -->
+
+  </div>
+</div>
+
+
+
+
+
+
+

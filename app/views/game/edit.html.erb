@@ -1,0 +1,77 @@
+<div class="score_keeper" ng-controller="ScoreKeepersCtrl as skeeps">
+  <div class="identifiers">
+
+    <div class="button fg_missed_button" stat="missed" ng-click="skeeps.selectType(1)">
+      SHOTS MISSED
+      <h1>{{skeeps.missed_fieldgoals.length}}</h1>
+    </div>
+
+    <div class="button fg_made_button" stat="made" ng-click="skeeps.selectType(2)">
+      SHOTS MADE
+      <h1>{{skeeps.made_fieldgoals.length}}</h1>
+    </div>
+
+    <div class="button rebound_button" stat="rebounds" ng-click="skeeps.selectType(3)">
+      REBOUNDS
+      <h1>{{skeeps.rebounds.length}}</h1>
+    </div>
+
+    <div class="button steal_button" stat="steals" ng-click="skeeps.selectType(4)">
+      STEALS
+      <h1>{{skeeps.steals.length}}</h1>
+    </div>
+
+    <div class="button turnover_button" stat="turnovers" ng-click="skeeps.selectType(5)">
+      TURNOVERS
+      <h1>{{skeeps.turnovers.length}}</h1>
+    </div>
+
+    <div class="button block_button" stat="blocks" ng-click="skeeps.selectType(6)">
+      BLOCKS
+      <h1>{{skeeps.blocks.length}}</h1>
+    </div>
+
+    <a href ng-href="/game/<%= @game.id %>"><div class="heatmap_button">
+      <h1>HEAT/COURT</h1>
+    </div></a>
+
+    <a href><div class="clear_heatmap">
+      <h1>RESET MAP</h1>
+    </div></a>
+
+    <div class="game_over_button" id="game_over">Game Over?</div>
+
+    <div class="game_over_form" id="game_over_form">
+      <ul >
+        <%= form_for @game do |f|%>
+          <li><label class="win" for="win"><p>Win?</p></label>
+            <input type="checkbox" name="win" value="win"></li>
+          <li><label class="loss" for="loss"><p>Loss?</p></label>
+            <input type="checkbox" name="loss" value="loss"></li>
+          <button class="btn btn-primary btn-block">Submit</button>
+
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+
+  <input id="game_id" value="<%= @game.id %>" type="hidden">
+
+  <a href><div class="court" ng-click="skeeps.recordStats($event, skeeps.type)">
+    <div id="directions">
+      <p>Begin by clicking a stat you want to track. Then click the court.</p>
+    </div>
+    <p class="court-mode">COURT MODE</p>
+  </div></a>
+
+  <div class="heat_court_map">
+    <p class="heatmap-mode">HEATMAP MODE</p>
+    <!-- <div id="directions">
+      <p>Turn on the Heatmap by clicking on a stat. To clear the Heatmap click the RESET button.</p>
+    </div> -->
+  </div>
+
+
+
+</div>

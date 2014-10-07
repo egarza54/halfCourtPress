@@ -1,0 +1,10 @@
+<h1>SIGN UP</h1>
+  <ul class="form">
+    <%= form_for(:user, :url => {:controller => 'user', :action => 'update'}) do |f|%>
+      <li><%= f.text_field :name, :size => 70, placeholder: 'Full Name' %></li>
+      <li><%= f.email_field :email, :size => 70, placeholder: 'Email' %></li>
+      <li><%= f.password_field :password, :size => 70, placeholder: 'Password' %></li>
+      <li><%= f.password_field :password_confirmation, :size => 70, placeholder: 'Confim Password' %></li>
+      <li class = "button"><%= f.submit "Edit" %></li>
+    <% end %>
+  </ul>

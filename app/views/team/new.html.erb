@@ -1,0 +1,10 @@
+<p> new team page </p>
+
+<h1>Create a new team</h1>
+    <ul class="welcome_form">
+      <%= form_for(:team, :url => {:controller => 'team', :action => 'create'}) do |f|%>
+        <li><%= f.text_field :name, :size => 70, placeholder: 'Team Name' %></li>
+        <li><%= f.text_field :school, :size => 70, placeholder: 'School Name' %></li>
+        <li class = "button"><%= f.submit "Create" %></li>
+      <% end %>
+    </ul>

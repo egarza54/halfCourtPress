@@ -1,0 +1,49 @@
+<div class="score_keeper" ng-controller="ScoreKeepersCtrl as skeeps">
+
+  <div class="gameover_identifiers">
+    <a href><div class="fg_missed_button">
+      SHOTS MISS
+      <h1><%= @missed_shots.length %></h1>
+    </div></a>
+
+    <a href><div class="fg_made_button">
+      SHOTS MADE
+      <h1><%= @made_shots.length %></h1>
+    </div></a>
+
+    <a href><div class="rebound_button">
+      REBOUNDS
+      <h1><%= @rebounds.length %></h1>
+    </div></a>
+
+    <a href><div class="steal_button">
+      STEALS
+      <h1><%= @steals.length %></h1>
+    </div></a>
+
+    <a href><div class="turnover_button">
+      TURNOVERS
+      <h1><%= @turnovers.length %></h1>
+    </div></a>
+
+    <a href><div class="block_button">
+      BLOCKS
+      <h1><%= @blocks.length %></h1>
+    </div></a>
+
+    <a href><div class="clear_heatmap">
+      <h1>RESET MAP</h1>
+    </div></a>
+
+
+  </div>
+
+  <div class="heat_court">
+    <div id="directions">
+      <p>Turn on the Heatmap by clicking on a stat. To clear the Heatmap click the RESET button.</p>
+    </div>
+  </div>
+
+  <input id="game_id" value="<%= @game.id %>" type="hidden">
+
+</div>
