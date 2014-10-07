@@ -8047,3 +8047,4 @@ Migrating to CreateSeasons (20140904142537)
   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
   [1m[35mSQL (0.2ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:01:56.968004"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:01:56.968004"], ["x_coord", 932], ["y_coord", 733]]
   [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
