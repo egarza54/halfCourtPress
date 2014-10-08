@@ -8334,3 +8334,1788 @@ Migrating to CreateSeasons (20140904142537)
   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
   [1m[35mSQL (0.1ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-07 23:48:57.810573"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-07 23:48:57.810573"], ["x_coord", 936], ["y_coord", 469]]
   [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-07 19:00:45 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UserController#index as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/user/1
+Completed 302 Found in 29ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/user/1" for 127.0.0.1 at 2014-10-07 19:00:45 -0500
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.3ms)[0m  SELECT "teams".* FROM "teams"  WHERE "teams"."user_id" = $1  [["user_id", 1]]
+  Rendered user/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 608ms (Views: 530.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+
+
+Started GET "/assets/twitter-bootstrap-static/sprites.css?body=1" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+
+
+Started GET "/assets/sign_in.js?body=1" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+
+
+Started GET "/assets/game_over.js?body=1" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+
+
+Started GET "/assets/heatmap.js?body=1" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+
+
+Started GET "/assets/heat_show.js?body=1" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+
+
+Started GET "/assets/heat_map_gameover.js?body=1" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+
+
+Started GET "/assets/heat_buttons.js?body=1" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+
+
+Started GET "/assets/ui-bootstrap-0.11.0.min.js?body=1" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+
+
+Started GET "/assets/angular/controllers/DashboardCtrl.js?body=1" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+
+
+Started GET "/assets/angular/controllers/ScoreKeepersCtrl.js?body=1" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+
+
+Started GET "/assets/angular/directives/dashboard.js?body=1" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+
+
+Started GET "/assets/twitter-bootstrap-static/twitter/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+
+ActionController::RoutingError (No route matches [GET] "/assets/twitter-bootstrap-static/twitter/fonts/glyphicons-halflings-regular.woff"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (10.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (79.4ms)
+
+
+Started GET "/user/1/teams.json" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+Processing by UserController#show_all_teams as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.5ms)[0m  SELECT "teams".* FROM "teams"  WHERE "teams"."user_id" = 1
+Completed 200 OK in 10ms (Views: 2.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/game/NaN.json" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+Processing by GameController#show as JSON
+  Parameters: {"id"=>"NaN"}
+  [1m[36mGame Load (0.5ms)[0m  [1mSELECT  "games".* FROM "games"  WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 12ms
+
+ActiveRecord::RecordNotFound - Couldn't find Game with 'id'=NaN:
+  activerecord (4.1.5) lib/active_record/relation/finder_methods.rb:320:in `raise_record_not_found_exception!'
+  activerecord (4.1.5) lib/active_record/relation/finder_methods.rb:420:in `find_one'
+  activerecord (4.1.5) lib/active_record/relation/finder_methods.rb:404:in `find_with_ids'
+  activerecord (4.1.5) lib/active_record/relation/finder_methods.rb:68:in `find'
+  activerecord (4.1.5) lib/active_record/querying.rb:3:in `find'
+  app/controllers/game_controller.rb:33:in `show'
+  actionpack (4.1.5) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.1.5) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.5) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.5) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.5) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.5) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.5) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.5) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.5) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.5) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.5) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/user/1/team/1/seasons.json" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+Processing by UserController#show_all_team_seasons as JSON
+  Parameters: {"id"=>"1", "team_id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mSeason Load (0.3ms)[0m  SELECT "seasons".* FROM "seasons"  WHERE "seasons"."team_id" = $1  [["team_id", 1]]
+Completed 200 OK in 14ms (Views: 7.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/user/1/team/2/seasons.json" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+Processing by UserController#show_all_team_seasons as JSON
+  Parameters: {"id"=>"1", "team_id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (2.9ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mSeason Load (0.3ms)[0m  [1mSELECT "seasons".* FROM "seasons"  WHERE "seasons"."team_id" = $1[0m  [["team_id", 2]]
+Completed 200 OK in 10ms (Views: 1.5ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/twitter/fonts/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+
+ActionController::RoutingError (No route matches [GET] "/assets/twitter-bootstrap-static/twitter/fonts/glyphicons-halflings-regular.ttf"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (34.5ms)
+
+
+Started GET "/game/NaN.json" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+Processing by GameController#show as JSON
+  Parameters: {"id"=>"NaN"}
+  [1m[35mGame Load (0.3ms)[0m  SELECT  "games".* FROM "games"  WHERE "games"."id" = $1 LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound - Couldn't find Game with 'id'=NaN:
+  activerecord (4.1.5) lib/active_record/relation/finder_methods.rb:320:in `raise_record_not_found_exception!'
+  activerecord (4.1.5) lib/active_record/relation/finder_methods.rb:420:in `find_one'
+  activerecord (4.1.5) lib/active_record/relation/finder_methods.rb:404:in `find_with_ids'
+  activerecord (4.1.5) lib/active_record/relation/finder_methods.rb:68:in `find'
+  activerecord (4.1.5) lib/active_record/querying.rb:3:in `find'
+  app/controllers/game_controller.rb:33:in `show'
+  actionpack (4.1.5) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.1.5) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.5) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.5) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.5) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.5) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.5) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.5) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.5) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.5) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.5) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/user/1/season/1/games.json" for 127.0.0.1 at 2014-10-07 19:00:46 -0500
+Processing by UserController#show_all_season_games as JSON
+  Parameters: {"id"=>"1", "season_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mSeason Load (0.3ms)[0m  SELECT  "seasons".* FROM "seasons"  WHERE "seasons"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGame Load (0.4ms)[0m  [1mSELECT "games".* FROM "games"  WHERE "games"."season_id" = $1  ORDER BY date desc[0m  [["season_id", 1]]
+Completed 200 OK in 24ms (Views: 18.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/user/1/season/2/games.json" for 127.0.0.1 at 2014-10-07 19:00:47 -0500
+Processing by UserController#show_all_season_games as JSON
+  Parameters: {"id"=>"1", "season_id"=>"2"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSeason Load (0.3ms)[0m  [1mSELECT  "seasons".* FROM "seasons"  WHERE "seasons"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mGame Load (0.4ms)[0m  SELECT "games".* FROM "games"  WHERE "games"."season_id" = $1  ORDER BY date desc  [["season_id", 2]]
+Completed 200 OK in 10ms (Views: 4.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/twitter/fonts/glyphicons-halflings-regular.svg" for 127.0.0.1 at 2014-10-07 19:00:47 -0500
+
+ActionController::RoutingError (No route matches [GET] "/assets/twitter-bootstrap-static/twitter/fonts/glyphicons-halflings-regular.svg"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (43.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (96.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-07 19:04:19 -0500
+Processing by UserController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Redirected to http://localhost:3000/user/1
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-07 19:04:20 -0500
+Processing by UserController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/user/1
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/user/1" for 127.0.0.1 at 2014-10-07 19:04:20 -0500
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT "teams".* FROM "teams"  WHERE "teams"."user_id" = $1  [["user_id", 1]]
+  Rendered user/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 306ms (Views: 303.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-07 19:04:20 -0500
+
+
+Started GET "/assets/twitter-bootstrap-static/sprites.css?body=1" for 127.0.0.1 at 2014-10-07 19:04:20 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-07 19:04:20 -0500
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-10-07 19:04:20 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-07 19:04:20 -0500
+
+
+Started GET "/assets/sign_in.js?body=1" for 127.0.0.1 at 2014-10-07 19:04:20 -0500
+
+
+Started GET "/assets/game_over.js?body=1" for 127.0.0.1 at 2014-10-07 19:04:20 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-07 19:04:20 -0500
+
+
+Started GET "/assets/heatmap.js?body=1" for 127.0.0.1 at 2014-10-07 19:04:20 -0500
+
+
+Started GET "/assets/heat_buttons.js?body=1" for 127.0.0.1 at 2014-10-07 19:04:20 -0500
+
+
+Started GET "/assets/heat_show.js?body=1" for 127.0.0.1 at 2014-10-07 19:04:20 -0500
+
+
+Started GET "/assets/heat_map_gameover.js?body=1" for 127.0.0.1 at 2014-10-07 19:04:20 -0500
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-10-07 19:04:20 -0500
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-10-07 19:04:20 -0500
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-10-07 19:04:20 -0500
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-10-07 19:04:20 -0500
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-10-07 19:04:20 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-10-07 19:04:20 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-10-07 19:04:20 -0500
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-10-07 19:04:20 -0500
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-10-07 19:04:20 -0500
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-10-07 19:04:20 -0500
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-10-07 19:04:20 -0500
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-10-07 19:04:20 -0500
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-07 19:04:20 -0500
+
+
+Started GET "/assets/ui-bootstrap-0.11.0.min.js?body=1" for 127.0.0.1 at 2014-10-07 19:04:20 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-07 19:04:20 -0500
+
+
+Started GET "/assets/angular/controllers/DashboardCtrl.js?body=1" for 127.0.0.1 at 2014-10-07 19:04:20 -0500
+
+
+Started GET "/assets/angular/controllers/ScoreKeepersCtrl.js?body=1" for 127.0.0.1 at 2014-10-07 19:04:20 -0500
+
+
+Started GET "/assets/angular/directives/dashboard.js?body=1" for 127.0.0.1 at 2014-10-07 19:04:20 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-07 19:04:20 -0500
+
+
+Started GET "/assets/twitter-bootstrap-static/twitter/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-07 19:04:20 -0500
+
+ActionController::RoutingError (No route matches [GET] "/assets/twitter-bootstrap-static/twitter/fonts/glyphicons-halflings-regular.woff"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (73.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (137.4ms)
+
+
+Started GET "/user/1/teams.json" for 127.0.0.1 at 2014-10-07 19:04:21 -0500
+Processing by UserController#show_all_teams as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.3ms)[0m  SELECT "teams".* FROM "teams"  WHERE "teams"."user_id" = 1
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/game/NaN.json" for 127.0.0.1 at 2014-10-07 19:04:21 -0500
+Processing by GameController#show as JSON
+  Parameters: {"id"=>"NaN"}
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT  "games".* FROM "games"  WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound - Couldn't find Game with 'id'=NaN:
+  activerecord (4.1.5) lib/active_record/relation/finder_methods.rb:320:in `raise_record_not_found_exception!'
+  activerecord (4.1.5) lib/active_record/relation/finder_methods.rb:420:in `find_one'
+  activerecord (4.1.5) lib/active_record/relation/finder_methods.rb:404:in `find_with_ids'
+  activerecord (4.1.5) lib/active_record/relation/finder_methods.rb:68:in `find'
+  activerecord (4.1.5) lib/active_record/querying.rb:3:in `find'
+  app/controllers/game_controller.rb:33:in `show'
+  actionpack (4.1.5) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.1.5) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.5) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.5) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.5) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.5) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.5) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.5) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.5) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.5) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.5) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/game/NaN.json" for 127.0.0.1 at 2014-10-07 19:04:21 -0500
+Processing by GameController#show as JSON
+  Parameters: {"id"=>"NaN"}
+  [1m[35mGame Load (0.4ms)[0m  SELECT  "games".* FROM "games"  WHERE "games"."id" = $1 LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound - Couldn't find Game with 'id'=NaN:
+  activerecord (4.1.5) lib/active_record/relation/finder_methods.rb:320:in `raise_record_not_found_exception!'
+  activerecord (4.1.5) lib/active_record/relation/finder_methods.rb:420:in `find_one'
+  activerecord (4.1.5) lib/active_record/relation/finder_methods.rb:404:in `find_with_ids'
+  activerecord (4.1.5) lib/active_record/relation/finder_methods.rb:68:in `find'
+  activerecord (4.1.5) lib/active_record/querying.rb:3:in `find'
+  app/controllers/game_controller.rb:33:in `show'
+  actionpack (4.1.5) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.1.5) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.5) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.5) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.5) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.5) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.5) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.5) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.5) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.5) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.5) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/assets/twitter-bootstrap-static/twitter/fonts/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2014-10-07 19:04:21 -0500
+
+ActionController::RoutingError (No route matches [GET] "/assets/twitter-bootstrap-static/twitter/fonts/glyphicons-halflings-regular.ttf"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (37.5ms)
+
+
+Started GET "/user/1/team/1/seasons.json" for 127.0.0.1 at 2014-10-07 19:04:21 -0500
+Processing by UserController#show_all_team_seasons as JSON
+  Parameters: {"id"=>"1", "team_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.3ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSeason Load (0.2ms)[0m  [1mSELECT "seasons".* FROM "seasons"  WHERE "seasons"."team_id" = $1[0m  [["team_id", 1]]
+Completed 200 OK in 5ms (Views: 1.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/user/1/team/2/seasons.json" for 127.0.0.1 at 2014-10-07 19:04:21 -0500
+Processing by UserController#show_all_team_seasons as JSON
+  Parameters: {"id"=>"1", "team_id"=>"2"}
+  [1m[35mUser Load (1.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTeam Load (0.4ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mSeason Load (0.3ms)[0m  SELECT "seasons".* FROM "seasons"  WHERE "seasons"."team_id" = $1  [["team_id", 2]]
+Completed 200 OK in 7ms (Views: 1.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/twitter/fonts/glyphicons-halflings-regular.svg" for 127.0.0.1 at 2014-10-07 19:04:21 -0500
+
+ActionController::RoutingError (No route matches [GET] "/assets/twitter-bootstrap-static/twitter/fonts/glyphicons-halflings-regular.svg"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (33.6ms)
+
+
+Started GET "/user/1/season/1/games.json" for 127.0.0.1 at 2014-10-07 19:04:21 -0500
+Processing by UserController#show_all_season_games as JSON
+  Parameters: {"id"=>"1", "season_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mSeason Load (0.3ms)[0m  SELECT  "seasons".* FROM "seasons"  WHERE "seasons"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGame Load (0.5ms)[0m  [1mSELECT "games".* FROM "games"  WHERE "games"."season_id" = $1  ORDER BY date desc[0m  [["season_id", 1]]
+Completed 200 OK in 11ms (Views: 5.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/user/1/season/2/games.json" for 127.0.0.1 at 2014-10-07 19:04:21 -0500
+Processing by UserController#show_all_season_games as JSON
+  Parameters: {"id"=>"1", "season_id"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSeason Load (0.3ms)[0m  [1mSELECT  "seasons".* FROM "seasons"  WHERE "seasons"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mGame Load (0.4ms)[0m  SELECT "games".* FROM "games"  WHERE "games"."season_id" = $1  ORDER BY date desc  [["season_id", 2]]
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-07 19:04:26 -0500
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-10-07 19:04:26 -0500
+
+
+Started GET "/assets/twitter-bootstrap-static/sprites.css?body=1" for 127.0.0.1 at 2014-10-07 19:04:26 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-07 19:04:26 -0500
+  [1m[36mGame Load (0.7ms)[0m  [1mSELECT  "games".* FROM "games"   ORDER BY "games"."id" ASC LIMIT 1[0m
+  [1m[36m (2.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.7ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140904135258)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (4.0ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying(255), "email" character varying(255), "password_digest" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140904135258"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateTeams (20140904135318)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.5ms)[0m  [1mCREATE TABLE "teams" ("id" serial primary key, "name" character varying(255), "school" character varying(255), "user_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140904135318"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateGames (20140904135337)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE "games" ("id" serial primary key, "date" timestamp, "location" character varying(255) DEFAULT 'home', "opponent" character varying(255), "win" character varying(255), "team_score" integer, "season_id" integer, "gameover" boolean DEFAULT 'f', "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140904135337"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateStats (20140904135450)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.9ms)[0m  [1mCREATE TABLE "stats" ("id" serial primary key, "game_id" integer, "x_coord" integer, "y_coord" integer, "made" boolean, "stat_type" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140904135450"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateSeasons (20140904142537)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.9ms)[0m  [1mCREATE TABLE "seasons" ("id" serial primary key, "name" character varying(255), "team_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140904142537"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (3.5ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'egarza@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.103771"], ["email", "egarza@gmail.com"], ["name", "Edgar Garza"], ["password_digest", "$2a$10$eFtRw5XFPQAMuP.H6SurpOpZZf8OmKdOtIhxqhY1Xog065lrOXHGW"], ["updated_at", "2014-10-08 00:05:24.103771"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "teams" ("created_at", "name", "school", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.133747"], ["name", "Varsity"], ["school", "Mirta Ramirez"], ["updated_at", "2014-10-08 00:05:24.133747"], ["user_id", 1]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "teams" ("created_at", "name", "school", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.137911"], ["name", "Junior Varsity"], ["school", "Mirta Ramirez"], ["updated_at", "2014-10-08 00:05:24.137911"], ["user_id", 1]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "seasons" ("created_at", "name", "team_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.154718"], ["name", "2013"], ["team_id", 1], ["updated_at", "2014-10-08 00:05:24.154718"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "seasons" ("created_at", "name", "team_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.160395"], ["name", "2014"], ["team_id", 2], ["updated_at", "2014-10-08 00:05:24.160395"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.535262"], ["date", "2014-04-06 00:00:00.000000"], ["location", "83067 Roselyn Via"], ["opponent", "Pritzker"], ["season_id", 1], ["updated_at", "2014-10-08 00:05:24.535262"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.539739"], ["date", "2014-04-05 00:00:00.000000"], ["location", "9296 Reggie Creek"], ["opponent", "Bulls"], ["season_id", 2], ["updated_at", "2014-10-08 00:05:24.539739"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.542312"], ["date", "2014-05-02 00:00:00.000000"], ["location", "7460 Dickens Junctions"], ["opponent", "Cass Tech"], ["season_id", 1], ["updated_at", "2014-10-08 00:05:24.542312"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.544597"], ["date", "2014-04-06 00:00:00.000000"], ["location", "9314 Ike Common"], ["opponent", "Simean"], ["season_id", 2], ["updated_at", "2014-10-08 00:05:24.544597"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.547129"], ["date", "2014-04-05 00:00:00.000000"], ["location", "271 Barrows Ways"], ["opponent", "Pritzker"], ["season_id", 1], ["updated_at", "2014-10-08 00:05:24.547129"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.549349"], ["date", "2014-04-05 00:00:00.000000"], ["location", "8117 Murphy Shoal"], ["opponent", "Cass Tech"], ["season_id", 2], ["updated_at", "2014-10-08 00:05:24.549349"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.551447"], ["date", "2014-04-07 00:00:00.000000"], ["location", "267 Hettinger Coves"], ["opponent", "Whitney Young"], ["season_id", 1], ["updated_at", "2014-10-08 00:05:24.551447"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.553814"], ["date", "2014-04-06 00:00:00.000000"], ["location", "892 Nella Route"], ["opponent", "Rauner"], ["season_id", 2], ["updated_at", "2014-10-08 00:05:24.553814"]]
+  [1m[36m (2.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.558184"], ["date", "2014-04-04 00:00:00.000000"], ["location", "9702 Olson Stravenue"], ["opponent", "Simean"], ["season_id", 1], ["updated_at", "2014-10-08 00:05:24.558184"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.560354"], ["date", "2014-04-05 00:00:00.000000"], ["location", "774 Leuschke Keys"], ["opponent", "Pritzker"], ["season_id", 2], ["updated_at", "2014-10-08 00:05:24.560354"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.562483"], ["date", "2014-04-04 00:00:00.000000"], ["location", "178 Percy Course"], ["opponent", "Bulls"], ["season_id", 1], ["updated_at", "2014-10-08 00:05:24.562483"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.564956"], ["date", "2014-04-04 00:00:00.000000"], ["location", "71109 Koss Villages"], ["opponent", "Rauner"], ["season_id", 2], ["updated_at", "2014-10-08 00:05:24.564956"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.567000"], ["date", "2014-04-03 00:00:00.000000"], ["location", "63581 Wisozk Rue"], ["opponent", "Bulls"], ["season_id", 1], ["updated_at", "2014-10-08 00:05:24.567000"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.569179"], ["date", "2014-04-07 00:00:00.000000"], ["location", "39256 Jones Throughway"], ["opponent", "Cass Tech"], ["season_id", 2], ["updated_at", "2014-10-08 00:05:24.569179"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.571243"], ["date", "2014-04-06 00:00:00.000000"], ["location", "48557 Haley Centers"], ["opponent", "Cass Tech"], ["season_id", 1], ["updated_at", "2014-10-08 00:05:24.571243"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.573408"], ["date", "2014-05-02 00:00:00.000000"], ["location", "827 Nina Fall"], ["opponent", "Renaissance"], ["season_id", 2], ["updated_at", "2014-10-08 00:05:24.573408"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.575512"], ["date", "2014-04-07 00:00:00.000000"], ["location", "69002 Hagenes Alley"], ["opponent", "Noble"], ["season_id", 1], ["updated_at", "2014-10-08 00:05:24.575512"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.577525"], ["date", "2014-04-05 00:00:00.000000"], ["location", "868 Alfred Hill"], ["opponent", "Cass Tech"], ["season_id", 2], ["updated_at", "2014-10-08 00:05:24.577525"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.579693"], ["date", "2014-05-02 00:00:00.000000"], ["location", "1003 Henri Lock"], ["opponent", "Rauner"], ["season_id", 1], ["updated_at", "2014-10-08 00:05:24.579693"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "games" ("created_at", "date", "location", "opponent", "season_id", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.582043"], ["date", "2014-04-06 00:00:00.000000"], ["location", "2125 McLaughlin Locks"], ["opponent", "Noble"], ["season_id", 2], ["updated_at", "2014-10-08 00:05:24.582043"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.592608"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.592608"], ["x_coord", 882], ["y_coord", 264]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.595409"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.595409"], ["x_coord", 1348], ["y_coord", 258]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.597455"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.597455"], ["x_coord", 1376], ["y_coord", 93]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.599301"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.599301"], ["x_coord", 683], ["y_coord", 532]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.600987"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.600987"], ["x_coord", 1264], ["y_coord", 641]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.602508"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.602508"], ["x_coord", 1294], ["y_coord", 45]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.604303"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.604303"], ["x_coord", 748], ["y_coord", 674]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.606004"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.606004"], ["x_coord", 1217], ["y_coord", 66]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.607679"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.607679"], ["x_coord", 1178], ["y_coord", 542]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.609532"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.609532"], ["x_coord", 429], ["y_coord", 514]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.611216"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.611216"], ["x_coord", 496], ["y_coord", 314]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.612921"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.612921"], ["x_coord", 728], ["y_coord", 303]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.614934"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.614934"], ["x_coord", 763], ["y_coord", 676]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.616755"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.616755"], ["x_coord", 798], ["y_coord", 314]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.618427"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.618427"], ["x_coord", 474], ["y_coord", 392]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.620097"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.620097"], ["x_coord", 1391], ["y_coord", 636]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.621819"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.621819"], ["x_coord", 1008], ["y_coord", 451]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.623528"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.623528"], ["x_coord", 560], ["y_coord", 160]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.625185"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.625185"], ["x_coord", 852], ["y_coord", 538]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.626798"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.626798"], ["x_coord", 667], ["y_coord", 344]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.628404"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.628404"], ["x_coord", 704], ["y_coord", 287]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.630087"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.630087"], ["x_coord", 1186], ["y_coord", 150]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.632083"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.632083"], ["x_coord", 969], ["y_coord", 681]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.633821"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.633821"], ["x_coord", 887], ["y_coord", 576]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.635498"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.635498"], ["x_coord", 515], ["y_coord", 154]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.637171"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.637171"], ["x_coord", 849], ["y_coord", 104]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.638782"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.638782"], ["x_coord", 1057], ["y_coord", 376]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.640418"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.640418"], ["x_coord", 906], ["y_coord", 574]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.642059"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.642059"], ["x_coord", 1032], ["y_coord", 138]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.643763"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.643763"], ["x_coord", 645], ["y_coord", 701]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.645440"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.645440"], ["x_coord", 668], ["y_coord", 118]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.647064"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.647064"], ["x_coord", 764], ["y_coord", 179]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.649144"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.649144"], ["x_coord", 367], ["y_coord", 222]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.650904"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.650904"], ["x_coord", 357], ["y_coord", 384]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.652498"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.652498"], ["x_coord", 958], ["y_coord", 739]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.654008"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.654008"], ["x_coord", 985], ["y_coord", 652]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.655498"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.655498"], ["x_coord", 550], ["y_coord", 58]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.656991"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.656991"], ["x_coord", 1117], ["y_coord", 148]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.658459"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.658459"], ["x_coord", 773], ["y_coord", 241]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.659941"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.659941"], ["x_coord", 906], ["y_coord", 313]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.661567"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.661567"], ["x_coord", 343], ["y_coord", 183]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.663221"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.663221"], ["x_coord", 444], ["y_coord", 394]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.665030"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.665030"], ["x_coord", 721], ["y_coord", 311]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.666920"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.666920"], ["x_coord", 1022], ["y_coord", 133]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.668613"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.668613"], ["x_coord", 692], ["y_coord", 140]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.670431"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.670431"], ["x_coord", 783], ["y_coord", 533]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.672102"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.672102"], ["x_coord", 1309], ["y_coord", 62]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.673759"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.673759"], ["x_coord", 757], ["y_coord", 322]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.675416"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.675416"], ["x_coord", 782], ["y_coord", 717]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.677092"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.677092"], ["x_coord", 779], ["y_coord", 542]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.678751"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.678751"], ["x_coord", 1179], ["y_coord", 238]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.680405"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.680405"], ["x_coord", 1341], ["y_coord", 726]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.682428"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.682428"], ["x_coord", 623], ["y_coord", 246]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.684350"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.684350"], ["x_coord", 473], ["y_coord", 440]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.686134"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.686134"], ["x_coord", 1315], ["y_coord", 438]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.687868"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.687868"], ["x_coord", 1032], ["y_coord", 386]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.689557"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.689557"], ["x_coord", 1281], ["y_coord", 725]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.691221"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.691221"], ["x_coord", 306], ["y_coord", 165]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["created_at", "2014-10-08 00:05:24.692859"], ["game_id", 1], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.692859"], ["x_coord", 910], ["y_coord", 480]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "stats" ("created_at", "game_id", "made", "stat_type", "updated_at", "x_coord", "y_coord") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-10-08 00:05:24.694531"], ["game_id", 2], ["made", "f"], ["stat_type", 1], ["updated_at", "2014-10-08 00:05:24.694531"], ["x_coord", 1201], ["y_coord", 340]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/session/logout" for 127.0.0.1 at 2014-10-07 19:05:31 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionController#logout as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-07 19:05:31 -0500
+Processing by UserController#index as HTML
+  Rendered user/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 542ms (Views: 532.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-07 19:05:32 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-07 19:05:32 -0500
+
+
+Started GET "/assets/twitter-bootstrap-static/sprites.css?body=1" for 127.0.0.1 at 2014-10-07 19:05:32 -0500
+
+
+Started GET "/assets/pick_a_team.gif" for 127.0.0.1 at 2014-10-07 19:05:32 -0500
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-10-07 19:05:32 -0500
+
+
+Started GET "/assets/collect_stats.gif" for 127.0.0.1 at 2014-10-07 19:05:32 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:32 -0500
+
+
+Started GET "/assets/sign_in.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:32 -0500
+
+
+Started GET "/assets/game_over.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:32 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:32 -0500
+
+
+Started GET "/assets/heatmap.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:32 -0500
+
+
+Started GET "/assets/heat_buttons.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:32 -0500
+
+
+Started GET "/assets/heat_show.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:32 -0500
+
+
+Started GET "/assets/heat_map_gameover.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:32 -0500
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:32 -0500
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:32 -0500
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:32 -0500
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:32 -0500
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:32 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:32 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:32 -0500
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:32 -0500
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:32 -0500
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:32 -0500
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:32 -0500
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:32 -0500
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:32 -0500
+
+
+Started GET "/assets/ui-bootstrap-0.11.0.min.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:32 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:32 -0500
+
+
+Started GET "/assets/angular/controllers/DashboardCtrl.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:32 -0500
+
+
+Started GET "/assets/angular/controllers/ScoreKeepersCtrl.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:32 -0500
+
+
+Started GET "/assets/angular/directives/dashboard.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:32 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:32 -0500
+
+
+Started GET "/assets/show_heat.gif" for 127.0.0.1 at 2014-10-07 19:05:32 -0500
+
+
+Started GET "/assets/rsz_background.jpg" for 127.0.0.1 at 2014-10-07 19:05:32 -0500
+
+
+Started GET "/game/NaN.json" for 127.0.0.1 at 2014-10-07 19:05:32 -0500
+Processing by GameController#show as JSON
+  Parameters: {"id"=>"NaN"}
+  [1m[35mGame Load (0.5ms)[0m  SELECT  "games".* FROM "games"  WHERE "games"."id" = $1 LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 16ms
+
+ActiveRecord::RecordNotFound - Couldn't find Game with 'id'=NaN:
+  activerecord (4.1.5) lib/active_record/relation/finder_methods.rb:320:in `raise_record_not_found_exception!'
+  activerecord (4.1.5) lib/active_record/relation/finder_methods.rb:420:in `find_one'
+  activerecord (4.1.5) lib/active_record/relation/finder_methods.rb:404:in `find_with_ids'
+  activerecord (4.1.5) lib/active_record/relation/finder_methods.rb:68:in `find'
+  activerecord (4.1.5) lib/active_record/querying.rb:3:in `find'
+  app/controllers/game_controller.rb:33:in `show'
+  actionpack (4.1.5) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.1.5) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.5) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.5) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.5) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.5) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.5) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.5) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.5) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.5) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.5) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/game/NaN.json" for 127.0.0.1 at 2014-10-07 19:05:33 -0500
+Processing by GameController#show as JSON
+  Parameters: {"id"=>"NaN"}
+  [1m[36mGame Load (0.5ms)[0m  [1mSELECT  "games".* FROM "games"  WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound - Couldn't find Game with 'id'=NaN:
+  activerecord (4.1.5) lib/active_record/relation/finder_methods.rb:320:in `raise_record_not_found_exception!'
+  activerecord (4.1.5) lib/active_record/relation/finder_methods.rb:420:in `find_one'
+  activerecord (4.1.5) lib/active_record/relation/finder_methods.rb:404:in `find_with_ids'
+  activerecord (4.1.5) lib/active_record/relation/finder_methods.rb:68:in `find'
+  activerecord (4.1.5) lib/active_record/querying.rb:3:in `find'
+  app/controllers/game_controller.rb:33:in `show'
+  actionpack (4.1.5) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.1.5) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.5) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.5) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.5) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.5) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.5) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.5) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.5) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.5) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.5) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/session/login" for 127.0.0.1 at 2014-10-07 19:05:37 -0500
+Processing by SessionController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dX73yIwhSf1A66EAIbFpqbzjyLC/0s1Y5uO90Ys68tY=", "user"=>{"email"=>"egarza@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'egarza@gmail.com' LIMIT 1
+Redirected to http://localhost:3000/user/1
+Completed 302 Found in 77ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/user/1" for 127.0.0.1 at 2014-10-07 19:05:37 -0500
+Processing by UserController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.3ms)[0m  SELECT "teams".* FROM "teams"  WHERE "teams"."user_id" = $1  [["user_id", 1]]
+  Rendered user/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 384ms (Views: 351.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/sprites.css?body=1" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+
+
+Started GET "/assets/sign_in.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+
+
+Started GET "/assets/game_over.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+
+
+Started GET "/assets/heatmap.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+
+
+Started GET "/assets/heat_buttons.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+
+
+Started GET "/assets/heat_show.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+
+
+Started GET "/assets/heat_map_gameover.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+
+
+Started GET "/assets/ui-bootstrap-0.11.0.min.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+
+
+Started GET "/assets/angular/controllers/DashboardCtrl.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+
+
+Started GET "/assets/angular/controllers/ScoreKeepersCtrl.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+
+
+Started GET "/assets/angular/directives/dashboard.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+
+
+Started GET "/user/1/teams.json" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+Processing by UserController#show_all_teams as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.4ms)[0m  SELECT "teams".* FROM "teams"  WHERE "teams"."user_id" = 1
+Completed 200 OK in 5ms (Views: 1.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/game/NaN.json" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+Processing by GameController#show as JSON
+  Parameters: {"id"=>"NaN"}
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT  "games".* FROM "games"  WHERE "games"."id" = $1 LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound - Couldn't find Game with 'id'=NaN:
+  activerecord (4.1.5) lib/active_record/relation/finder_methods.rb:320:in `raise_record_not_found_exception!'
+  activerecord (4.1.5) lib/active_record/relation/finder_methods.rb:420:in `find_one'
+  activerecord (4.1.5) lib/active_record/relation/finder_methods.rb:404:in `find_with_ids'
+  activerecord (4.1.5) lib/active_record/relation/finder_methods.rb:68:in `find'
+  activerecord (4.1.5) lib/active_record/querying.rb:3:in `find'
+  app/controllers/game_controller.rb:33:in `show'
+  actionpack (4.1.5) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.1.5) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.5) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.5) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.5) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.5) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.5) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.5) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.5) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.5) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.5) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/game/NaN.json" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+Processing by GameController#show as JSON
+  Parameters: {"id"=>"NaN"}
+  [1m[35mGame Load (0.3ms)[0m  SELECT  "games".* FROM "games"  WHERE "games"."id" = $1 LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound - Couldn't find Game with 'id'=NaN:
+  activerecord (4.1.5) lib/active_record/relation/finder_methods.rb:320:in `raise_record_not_found_exception!'
+  activerecord (4.1.5) lib/active_record/relation/finder_methods.rb:420:in `find_one'
+  activerecord (4.1.5) lib/active_record/relation/finder_methods.rb:404:in `find_with_ids'
+  activerecord (4.1.5) lib/active_record/relation/finder_methods.rb:68:in `find'
+  activerecord (4.1.5) lib/active_record/querying.rb:3:in `find'
+  app/controllers/game_controller.rb:33:in `show'
+  actionpack (4.1.5) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.1.5) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.5) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.5) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.5) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.5) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.5) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.5) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.5) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.5) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.5) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started GET "/user/1/team/1/seasons.json" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+Processing by UserController#show_all_team_seasons as JSON
+  Parameters: {"id"=>"1", "team_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTeam Load (0.3ms)[0m  SELECT  "teams".* FROM "teams"  WHERE "teams"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSeason Load (0.3ms)[0m  [1mSELECT "seasons".* FROM "seasons"  WHERE "seasons"."team_id" = $1[0m  [["team_id", 1]]
+Completed 200 OK in 73ms (Views: 67.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/user/1/team/2/seasons.json" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+Processing by UserController#show_all_team_seasons as JSON
+  Parameters: {"id"=>"1", "team_id"=>"2"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT  "teams".* FROM "teams"  WHERE "teams"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mSeason Load (0.3ms)[0m  SELECT "seasons".* FROM "seasons"  WHERE "seasons"."team_id" = $1  [["team_id", 2]]
+Completed 200 OK in 6ms (Views: 1.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/user/1/season/1/games.json" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+Processing by UserController#show_all_season_games as JSON
+  Parameters: {"id"=>"1", "season_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mSeason Load (0.4ms)[0m  SELECT  "seasons".* FROM "seasons"  WHERE "seasons"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mGame Load (0.6ms)[0m  [1mSELECT "games".* FROM "games"  WHERE "games"."season_id" = $1  ORDER BY date desc[0m  [["season_id", 1]]
+Completed 200 OK in 25ms (Views: 18.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/user/1/season/2/games.json" for 127.0.0.1 at 2014-10-07 19:05:38 -0500
+Processing by UserController#show_all_season_games as JSON
+  Parameters: {"id"=>"1", "season_id"=>"2"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSeason Load (0.4ms)[0m  [1mSELECT  "seasons".* FROM "seasons"  WHERE "seasons"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mGame Load (0.5ms)[0m  SELECT "games".* FROM "games"  WHERE "games"."season_id" = $1  ORDER BY date desc  [["season_id", 2]]
+Completed 200 OK in 12ms (Views: 6.3ms | ActiveRecord: 1.2ms)
