@@ -29,7 +29,7 @@ class GameController < ApplicationController
   end
 
   def show
-    # @user = User.find(session[:user_id])
+    @user = User.find(session[:user_id])
     @game = Game.find(params[:id])
     @missed_shots = Stat.where(game_id: params[:id], stat_type: 1)
     @made_shots = Stat.where(game_id: params[:id], stat_type: 2)
@@ -45,13 +45,12 @@ class GameController < ApplicationController
   end
 
   def edit
+    @user = User.find(session[:user_id])
     @game = Game.find(params[:id])
 
     if @game.gameover == true
       redirect_to game_path(@game)
     end
-
-    @user = User.find(session[:user_id])
   end
 
   def update #post for edit
